@@ -30,5 +30,5 @@ I will be doing the following:
 </details>
 
 ### author:
-Shaneil Kapadia
+Shaneil Kapadia\n
 Created May 4th, 2020
