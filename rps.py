@@ -13,12 +13,14 @@ def getName():
             truth = False
     return name
 
+#using a rng gets a random number and mods it by 3 to pick between rock paper and scissors
 def randomChoice():
     choice = random.randint(0,81240806)
     choice = choice % 3
     ls = ["rock", "paper", "scissors"]
     return ls[choice]
 
+#checks if the parameter string is a valid input
 def validChoice(choice):
     choice = choice.lower()
     ls = ["rock", "paper", "scissors"]
@@ -27,6 +29,7 @@ def validChoice(choice):
             return True
     return False
 
+#generates a rock paper or scissors choice for Elon (CPU)
 def elonChoice():
     choice = randomChoice()
     ls = ["rock", "paper", "scissors"]
@@ -34,6 +37,7 @@ def elonChoice():
         if(choice == ls[i]):
             return choice
 
+#asks player for a valid input 
 def playerChoice():
     valid = False
     while(valid == False):
@@ -62,7 +66,7 @@ def battle(name,  playerObj, elonObj):
     else:
         print(str(name) + " wins! as " + str(playerObj) + " beats " + str(elonObj))
     
-
+# essentially the main program
 def playingGame():
     name = getName()
     truth = True
