@@ -5,13 +5,18 @@ import string
 def getName():
     truth = False
     while(truth == False):
-        name = input("Please enter your name: ")
-        tmp = input(name + " what a fine name, is that the name you would like to choose? (T or F): ")
-        if(tmp == "T"):
+        name = input("What is your name?: ")
+        tmp = input(name + " what a fine name, is that the name you would like to choose? (Yes or No): ")
+        tmp = tmp.lower()
+        if(tmp == "yes"):
             truth = True
-        else:
+        elif(tmp == "no"):
             truth = False
     return name
+
+def greeting():
+    print("\nHello There! and welcome to our game of Rock, Paper, Scissors.") 
+    print("My name is Elon Nye, C.E.O. of Nye Motors and your opponent for this game.")
 
 #using a rng gets a random number and mods it by 3 to pick between rock paper and scissors
 def randomChoice():
@@ -41,7 +46,7 @@ def elonChoice():
 def playerChoice():
     valid = False
     while(valid == False):
-        choice = input("Enter a valid Choice (Rock, Paper or Scissors): ")
+        choice = input("Choose your object! (Rock, Paper or Scissors): ")
         valid = validChoice(choice)
     return choice.lower()
 
@@ -53,8 +58,8 @@ def battle(name,  playerObj, elonObj):
         print("Pick another Object!\n")
         playerObj = playerChoice()
         elonObj = elonChoice()
-        ls = []
 
+    ls = []
     if(playerObj == "rock"):
         ls = ["paper", "scissors"]
     elif(playerObj == "paper"):
@@ -62,23 +67,27 @@ def battle(name,  playerObj, elonObj):
     elif(playerObj == "scissors"):
         ls = ["rock", "paper"]
     if(elonObj == ls[0]):
-        print("Elon wins! as " + elonObj + " beats " + playerObj)
+        print("Elon wins! as " + elonObj + " beats " + name + "'s " + playerObj + "\n")
     else:
-        print(str(name) + " wins! as " + str(playerObj) + " beats " + str(elonObj))
+        print(str(name) + " wins! as " + str(playerObj) + " beats Elon's " + str(elonObj) + "\n")
     
 # essentially the main program
 def playingGame():
+    greeting()
     name = getName()
     truth = True
     while(truth):
+        tmp = ("string")
         playerObj = playerChoice()
         elonObj = elonChoice()
         battle(name, playerObj, elonObj)
-        tmp = input("would you like to keep playing? (Y/N)")
-        if(tmp == "Y"):
-            truth = True
-        else:
-            truth = False
-    print("Thank you for playing, I hope to play with you again")
+        while(not(tmp == "yes") and not(tmp == "no")):
+            tmp = input("would you like to keep playing? (Yes or No): ")
+            tmp = tmp.lower()
+            if(tmp == "yes"):
+                truth = True
+            elif(tmp == "no"):
+                truth = False
+    print("Thank you for playing, I hope to play with you again!\n")
 
 playingGame()
