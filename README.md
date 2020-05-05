@@ -1,4 +1,4 @@
-# RockPaperScissorsGame
+# RockPaperScissors Game
 
 ### Step 1: Planning 
     - Brainstorming on how this project will work
@@ -16,7 +16,6 @@
     - I do not know how I will be doing this quite yet
 
 #### Updates to above will be made as I figure out more things
-
 
 #### Author:
 Shaneil Kapadia<br />
