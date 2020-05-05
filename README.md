@@ -29,6 +29,6 @@ I will be doing the following:
     - I do not know how I will be doing this quite yet
 </details>
 
-### author:
+### Author:
 Shaneil Kapadia<br />
 Created May 4th, 2020
