@@ -5,7 +5,7 @@
     - How to implement the program
     - Brainstorming on what functions/methods will be needed to be made
 
-### Step 2: Implementing Backend Portions</summary>
+### Step 2: Implementing Backend Portions
     - defining functions
     - implementing functions
     - testing and debugging to make sure the program works the way I want it to
